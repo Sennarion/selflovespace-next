@@ -1,6 +1,6 @@
 export function setCookies(value, func) {
   const currentDate = new Date().toISOString().slice(0, 10);
-  localStorage.setItem(
+  window.localStorage.setItem(
     "cookiesAccepted",
     JSON.stringify({ accepted: value, date: currentDate })
   );
@@ -12,7 +12,7 @@ export function setCookies(value, func) {
 }
 
 export function checkCookies() {
-  const cookiesAccepted = localStorage.getItem("cookiesAccepted");
+  const cookiesAccepted = window.localStorage.getItem("cookiesAccepted");
 
   if (cookiesAccepted) {
     const { accepted, date } = JSON.parse(cookiesAccepted);
