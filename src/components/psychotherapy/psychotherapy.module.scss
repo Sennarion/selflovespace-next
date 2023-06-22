@@ -1,0 +1,63 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/vars.scss";
+
+.content {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  gap: 10rem;
+
+  @include bp($tablet_max - 1) {
+    flex-direction: column-reverse;
+  }
+}
+
+.imgWrapper {
+  position: relative;
+  flex-shrink: 0;
+  width: 30%;
+  padding-bottom: 40%;
+
+  @include wrapperRounded(6rem);
+
+  @include bp($tablet_max - 1) {
+    width: 100%;
+    padding-bottom: 133%;
+  }
+}
+
+.img {
+  object-fit: cover;
+  object-position: center;
+
+  @include imgRounded(6rem);
+}
+
+.textWrapper {
+  width: 70%;
+
+  @include bp($tablet_max - 1) {
+    width: 100%;
+  }
+}
+
+.textTitle {
+  margin-bottom: 1rem;
+
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.list {
+  margin-bottom: 2rem;
+}
+
+.item {
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+.leadersList {
+  margin-top: 4rem;
+}

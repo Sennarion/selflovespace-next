@@ -1,0 +1,55 @@
+@import "../../../styles//mixins.scss";
+@import "../../../styles//vars.scss";
+
+.leader {
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
+
+.link {
+  display: flex;
+  gap: 2rem;
+
+  color: inherit;
+  text-decoration: none;
+}
+
+.imgWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  width: 10.6rem;
+  height: 10.6rem;
+
+  border: 1px solid $blue;
+  border-radius: 50%;
+}
+
+.img {
+  width: 96%;
+  height: 96%;
+
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: 600;
+  color: $blue;
+}
+
+.position {
+  margin-bottom: 1rem;
+
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.descr {
+  line-height: 1.4;
+}

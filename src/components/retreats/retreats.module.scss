@@ -1,0 +1,69 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/vars.scss";
+
+.item {
+  &:not(:last-child) {
+    margin-bottom: 10rem;
+  }
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10rem;
+
+  @include bp($tablet_max, min) {
+    .item:nth-child(even) & {
+      flex-direction: row-reverse;
+    }
+  }
+
+  @include bp($tablet_max - 1) {
+    flex-direction: column-reverse;
+  }
+}
+
+.imgWrapper {
+  @include wrapperRounded(4rem);
+
+  position: relative;
+  flex-shrink: 0;
+  width: 30%;
+  padding-bottom: 30%;
+
+  @include bp($tablet_max - 1) {
+    width: 100%;
+    padding-bottom: 100%;
+  }
+}
+
+.text {
+  width: 70%;
+
+  @include bp($tablet_max - 1) {
+    width: 100%;
+  }
+}
+
+p + .textItem,
+ul + .textItem {
+  margin-top: 2rem;
+}
+
+.leaders {
+  margin-top: 4rem;
+}
+
+.img {
+  object-fit: cover;
+  object-position: center;
+
+  @include imgRounded(4rem);
+}

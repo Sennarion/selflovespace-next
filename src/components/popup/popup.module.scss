@@ -1,0 +1,66 @@
+@import '../../styles//mixins.scss';
+@import '../../styles//vars.scss';
+
+.popup {
+  position: fixed;
+  bottom: 4rem;
+  left: 4rem;
+
+  max-width: 50rem;
+  padding: 4rem;
+  background-color: $white;
+  border-radius: 2rem;
+  z-index: 10;
+  box-shadow: 0px 0px 10px 0px rgba(69, 69, 69, 0.54);
+
+  @include bp($tablet_max - 1) {
+    width: 80%;
+    max-width: auto;
+  }
+}
+
+.text {
+  margin-bottom: 3rem;
+}
+
+.butttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+
+  @include bp($tablet_max - 1) {
+    flex-direction: column;
+  }
+}
+
+.button {
+  width: 50%;
+  padding: 1rem 3rem;
+
+  color: $beige;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out;
+
+  &.accept {
+    background-color: $pink;
+  }
+
+  &.decline {
+    background-color: $green;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 0px 10px 0px rgba(69, 69, 69, 0.54);
+  }
+
+  @include bp($tablet_max - 1) {
+    width: 100%;
+  }
+}
+
+.link {
+  text-decoration: underline;
+}

@@ -1,0 +1,25 @@
+@import '../../../styles/mixins.scss';
+@import '../../../styles/vars.scss';
+
+.section {
+  &.fullHeight {
+    @include bp($tablet_max, min) {
+      display: flex;
+      align-items: center;
+      height: calc(100vh - 12rem);
+      min-height: 60rem;
+    }
+  }
+
+  &:nth-of-type(even) {
+    background-color: $beige_2;
+  }
+
+  @include bp($tablet_max, min) {
+    padding: 10rem 3rem;
+  }
+
+  @include bp($tablet_max - 1) {
+    padding: 6rem 2rem;
+  }
+}

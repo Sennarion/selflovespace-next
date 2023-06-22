@@ -1,0 +1,87 @@
+@import "../../styles//mixins.scss";
+@import "../../styles//vars.scss";
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rem;
+
+  @include bp($tablet_min - 1) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.serviceItem {
+  display: block;
+  width: calc((100% - 32rem) / 5);
+
+  @include bp($tablet_max - 1) {
+    width: calc((100% - 16rem) / 3);
+  }
+
+  @include bp($tablet_min - 1) {
+    width: 50%;
+  }
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-decoration: none;
+  color: inherit;
+
+  transition: transform 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.02);
+  }
+}
+
+.imgWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  margin-bottom: 4rem;
+
+  border: 2px solid $blue;
+  border-radius: 50%;
+  z-index: 0;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 90%;
+    background-color: $orange;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+    transition: background-color 0.2s ease-in-out;
+
+    .service:hover &,
+    .service:focus & {
+      background-color: $pink_2;
+    }
+  }
+}
+
+.img {
+  width: 70%;
+  height: 70%;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+}

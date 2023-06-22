@@ -1,0 +1,80 @@
+@import "../../styles//mixins.scss";
+@import "../../styles//vars.scss";
+
+.content {
+  display: flex;
+  gap: 10rem;
+
+  @include bp($tablet_max, min) {
+    align-items: flex-start;
+  }
+
+  @include bp($tablet_max - 1) {
+    flex-direction: column;
+  }
+}
+
+.imgWrapper {
+  position: relative;
+  flex-shrink: 0;
+  width: 30%;
+  padding-bottom: 40%;
+
+  @include wrapperLeaf(10rem);
+
+  @include bp($tablet_max - 1) {
+    width: 100%;
+    padding-bottom: 133%;
+  }
+}
+
+.img {
+  object-fit: cover;
+  object-position: center;
+
+  @include imgLeaf(10rem);
+}
+
+.textWrapper {
+  width: 70%;
+
+  @include bp($tablet_max - 1) {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.list {
+  margin-bottom: 6rem;
+}
+
+.item {
+  position: relative;
+
+  font-size: 2rem;
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    bottom: -1rem;
+    left: -5%;
+    width: 40%;
+    height: 1px;
+    background-color: $pink;
+
+    @include bp($tablet_max - 1) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.text {
+  font-size: 3.4rem;
+  font-weight: 600;
+  color: $pink;
+}

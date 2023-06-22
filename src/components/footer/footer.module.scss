@@ -1,0 +1,64 @@
+@import "../../styles/vars.scss";
+
+.footer {
+  display: flex;
+  align-items: center;
+  height: 20rem;
+  padding: 3rem;
+
+  background-color: $orange;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 2rem;
+}
+
+.logoWrapper {
+  position: relative;
+  display: block;
+  width: 22rem;
+  height: 8rem;
+}
+
+.socialList {
+  display: flex;
+}
+
+.socialLink {
+  display: block;
+  padding: 1rem;
+
+  color: $blue;
+  transition: color 0.2s ease-in-out;
+
+  svg {
+    display: block;
+  }
+
+  &:hover,
+  &:focus {
+    color: $green;
+  }
+}
+
+.policy {
+  text-align: center;
+}
+
+.link {
+  display: inline-block;
+  margin-left: 1rem;
+  color: inherit;
+  text-decoration: underline;
+
+  transition: color 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $green;
+  }
+}

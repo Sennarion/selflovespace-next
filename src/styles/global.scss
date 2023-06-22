@@ -1,0 +1,72 @@
+@import "./mixins.scss";
+@import "./vars.scss";
+
+:root {
+  --toastify-color-success: #348a9b;
+  --toastify-color-error: #cc475c;
+}
+
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+  @include bp($desktop, min) {
+    font-size: 10px;
+  }
+
+  @include bp($desktop - 1, $tablet_max) {
+    font-size: calc(100vw / 1440 * 10);
+  }
+
+  @include bp($tablet_max - 1, $mobile) {
+    font-size: 10px;
+  }
+
+  @include bp($mobile - 1) {
+    font-size: calc(100vw / 375 * 10);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.6;
+  background: $section-gradient;
+  color: #454545;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}

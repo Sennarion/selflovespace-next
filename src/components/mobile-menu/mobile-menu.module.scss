@@ -1,0 +1,66 @@
+@import '../../styles/vars.scss';
+@import '../../styles/mixins.scss';
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.menu {
+  position: fixed;
+  top: 12rem;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 12rem);
+  padding: 2rem;
+  background: $beige;
+  z-index: 200;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.2s ease-in-out;
+
+  &.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.navLink {
+  display: block;
+  padding: 1rem;
+
+  text-align: center;
+  text-transform: uppercase;
+  color: $blue;
+}
+
+.activeNavLink {
+  display: block;
+  padding: 1rem;
+
+  text-align: center;
+  text-transform: uppercase;
+  color: $pink;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.iconLink {
+  display: block;
+  padding: 0.4rem;
+  color: $blue;
+
+  svg {
+    display: block;
+  }
+}

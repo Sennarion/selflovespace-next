@@ -1,0 +1,108 @@
+@import './vars.scss';
+
+@mixin bp($width, $value: max) {
+  @if $value ==min {
+    @media screen and (min-width: $width) {
+      @content;
+    }
+  } @else if $value ==max {
+    @media screen and (max-width: $width) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $width) and (min-width: $value) {
+      @content;
+    }
+  }
+}
+
+@mixin wrapperArch($value) {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 2rem;
+    left: 2rem;
+    border: 2px solid $pink;
+    border-top-left-radius: $value;
+    border-top-right-radius: $value;
+
+    @include bp($tablet_max - 1) {
+      top: 1rem;
+      left: 1rem;
+    }
+  }
+}
+
+@mixin imgArch($value) {
+  position: relative;
+
+  border-top-left-radius: $value;
+  border-top-right-radius: $value;
+
+  overflow: hidden;
+  z-index: 1;
+}
+
+@mixin wrapperLeaf($value) {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    bottom: -2rem;
+    left: -2rem;
+    border: 2px solid $blue;
+    border-top-right-radius: $value;
+    border-bottom-left-radius: $value;
+
+    @include bp($tablet_max - 1) {
+      top: -1rem;
+      left: -1rem;
+    }
+  }
+}
+
+@mixin imgLeaf($value) {
+  position: relative;
+
+  border-top-right-radius: $value;
+  border-bottom-left-radius: $value;
+
+  overflow: hidden;
+  z-index: 1;
+}
+
+@mixin wrapperRounded($value) {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 2rem;
+    left: -2rem;
+    border: 2px solid $pink;
+    border-radius: $value;
+
+    @include bp($tablet_max - 1) {
+      top: 1rem;
+      left: -1rem;
+    }
+  }
+}
+
+@mixin imgRounded($value) {
+  position: relative;
+
+  border-radius: $value;
+
+  overflow: hidden;
+  z-index: 1;
+}

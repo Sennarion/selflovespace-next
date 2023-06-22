@@ -1,0 +1,90 @@
+@import "../../styles/vars.scss";
+@import "../../styles/mixins.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 12rem;
+  padding: 3rem;
+  z-index: 100;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoWrapper {
+  position: relative;
+
+  flex-shrink: 0;
+  display: block;
+  width: 22rem;
+  height: 8rem;
+}
+
+.navWrapper {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+
+  @include bp($tablet_max - 1) {
+    display: none;
+  }
+}
+
+.navList {
+  display: flex;
+  gap: 4rem;
+}
+
+.navLink {
+  padding: 1rem;
+
+  text-transform: uppercase;
+  color: $blue;
+
+  transition: color 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $green;
+  }
+}
+
+.activeNavLink {
+  padding: 1rem;
+
+  text-transform: uppercase;
+  color: $pink;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.iconLink {
+  display: block;
+  padding: 0.4rem;
+  color: $blue;
+
+  svg {
+    display: block;
+  }
+
+  transition: color 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $green;
+  }
+}
+
+.mobileNavWrapper {
+  @include bp($tablet_max, min) {
+    display: none;
+  }
+}

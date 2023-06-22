@@ -1,0 +1,103 @@
+@import "../../styles//mixins.scss";
+@import "../../styles//vars.scss";
+
+.row {
+  display: flex;
+  gap: 10rem;
+
+  &:not(:last-child) {
+    margin-bottom: 20rem;
+  }
+
+  @include bp($tablet_max, min) {
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  @include bp($tablet_max - 1) {
+    flex-direction: column;
+  }
+}
+
+.imgWrapper {
+  position: relative;
+  width: 40%;
+  padding-bottom: 50%;
+
+  @include bp($tablet_max - 1) {
+    width: 100%;
+    padding-bottom: 130%;
+  }
+}
+
+.text {
+  width: 60%;
+
+  @include bp($tablet_max - 1) {
+    width: 100%;
+  }
+}
+
+.name {
+  font-size: 3.6rem;
+  font-weight: 400;
+}
+
+.position {
+  margin-bottom: 2rem;
+
+  font-size: 2rem;
+}
+
+.descr {
+  margin-bottom: 2rem;
+}
+
+.listTitle {
+  margin-bottom: 1rem;
+
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    bottom: -1rem;
+    left: 5%;
+    width: 40%;
+    height: 2px;
+    background-color: $pink;
+  }
+}
+
+.imgWrapper {
+  &.arch {
+    @include wrapperArch(30rem);
+  }
+
+  &.leaf {
+    @include wrapperLeaf(20rem);
+  }
+}
+
+.img {
+  object-fit: cover;
+  object-position: center;
+
+  &.imgArch {
+    @include imgArch(30rem);
+  }
+
+  &.imgLeaf {
+    @include imgLeaf(20rem);
+  }
+}

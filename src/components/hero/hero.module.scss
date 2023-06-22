@@ -1,0 +1,165 @@
+@import "../../styles/vars.scss";
+@import "../../styles/mixins.scss";
+
+.content {
+  display: flex;
+  gap: 10rem;
+
+  @include bp($tablet_max, min) {
+    align-items: flex-end;
+  }
+
+  @include bp($tablet_max - 1) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.textWrapper {
+  @include bp($tablet_max, min) {
+    width: 60%;
+  }
+}
+
+.title {
+  margin-bottom: 4rem;
+
+  font-size: 8rem;
+  font-weight: 700;
+  line-height: 1;
+
+  color: $blue;
+
+  @include bp($tablet_max - 1) {
+    font-size: 5rem;
+  }
+}
+
+.titleAccent {
+  color: $pink;
+}
+
+.subtitle {
+  margin-bottom: 1rem;
+
+  &:last-of-type {
+    margin-bottom: 6rem;
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  margin-left: auto;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  @include bp($tablet_max, min) {
+    justify-content: flex-end;
+  }
+}
+
+.buttonText {
+  max-width: 16rem;
+
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: end;
+  text-transform: uppercase;
+
+  color: $black;
+
+  transition: color 0.2s ease-in-out;
+
+  .button:hover &,
+  .button:focus & {
+    color: $pink;
+  }
+
+  @include bp($tablet_max - 1) {
+    font-size: 1.6rem;
+  }
+}
+
+.buttonIconWrapper {
+  flex-shrink: 0;
+  position: relative;
+  display: block;
+  width: 9rem;
+  height: 9rem;
+  background-color: $orange;
+  border-radius: 50%;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 11rem;
+    height: 11rem;
+    border: 2px solid $pink;
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease-in-out;
+
+    .button:hover &,
+    .button:focus & {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    @include bp($tablet_max - 1) {
+      width: 8rem;
+      height: 8rem;
+    }
+  }
+
+  @include bp($tablet_max - 1) {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+.buttonIcon {
+  position: absolute;
+  display: block;
+  width: 12rem;
+  height: 4rem;
+  top: 50%;
+  left: 0;
+  transform: translate(-70%, -50%);
+  transition: transform 0.2s ease-in-out;
+
+  .button:hover &,
+  .button:focus & {
+    transform: translate(-50%, -50%);
+  }
+
+  @include bp($tablet_max - 1) {
+    width: 10rem;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  flex-shrink: 0;
+
+  @include wrapperArch(40rem);
+
+  width: 40%;
+  padding-bottom: 50%;
+
+  @include bp($tablet_max - 1) {
+    display: none;
+  }
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+
+  @include imgArch(40rem);
+}
