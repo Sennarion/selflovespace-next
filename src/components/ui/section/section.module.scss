@@ -1,5 +1,5 @@
-@import '../../../styles/mixins.scss';
-@import '../../../styles/vars.scss';
+@import "../../../styles/mixins.scss";
+@import "../../../styles/vars.scss";
 
 .section {
   &.fullHeight {
@@ -16,10 +16,10 @@
   }
 
   @include bp($tablet_max, min) {
-    padding: 10rem 3rem;
+    padding: 10rem;
   }
 
   @include bp($tablet_max - 1) {
-    padding: 6rem 2rem;
+    padding: 6rem 4rem;
   }
 }

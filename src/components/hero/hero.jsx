@@ -41,6 +41,7 @@ export default function Hero() {
                       className={styles.icon}
                       src={arrow}
                       alt="arrow"
+                      quality={100}
                       fill
                     />
                   </span>
@@ -55,6 +56,7 @@ export default function Hero() {
               className={styles.image}
               src={heroImg}
               alt="Self-care"
+              quality={100}
               fill
             />
           </div>

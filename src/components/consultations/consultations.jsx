@@ -20,6 +20,7 @@ export default function Consultations() {
               className={styles.img}
               src={img}
               alt="Psychological well-being"
+              quality={100}
               fill
             />
           </div>

@@ -33,14 +33,15 @@ export default function Header() {
     <header className={styles.header}>
       <Container>
         <div className={styles.headerContent}>
-          <a href="selflovespace.uk" className={styles.logoWrapper}>
+          <Link href="/" className={styles.logoWrapper}>
             <Image
               className={styles.logo}
               src={logo}
               alt="Self Love Space Logo"
+              quality={100}
               fill
             />
-          </a>
+          </Link>
           <div className={styles.navWrapper}>
             <nav className={styles.nav}>
               <ul className={styles.navList}>
@@ -62,7 +63,7 @@ export default function Header() {
               <li className={styles.icon}>
                 <a
                   className={styles.iconLink}
-                  href="mailto:bukovska@selflovespace.uk"
+                  href="mailto:valentyna@selflovespace.uk"
                 >
                   <IoMdMail size="18" />
                 </a>

@@ -32,6 +32,7 @@ export default function AboutUs() {
                     })}
                     src={img}
                     alt={name}
+                    quality={100}
                     fill
                   />
                 </div>

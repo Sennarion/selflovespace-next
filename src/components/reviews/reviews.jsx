@@ -38,7 +38,13 @@ export default function Reviews() {
             <SwiperSlide key={name}>
               <div className={styles.content}>
                 <div className={classNames(styles.imageWrapper, "js-fade-el")}>
-                  <Image className={styles.image} src={img} alt={name} fill />
+                  <Image
+                    className={styles.image}
+                    src={img}
+                    alt={name}
+                    quality={100}
+                    fill
+                  />
                 </div>
                 <div className={classNames(styles.textWrapper, "js-fade-el")}>
                   <h3 className={styles.name}>{name}</h3>

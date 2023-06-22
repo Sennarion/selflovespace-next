@@ -20,6 +20,7 @@ export default function Sessions() {
               className={styles.img}
               src={img}
               alt="Resilience building"
+              quality={100}
               fill
             />
           </div>

@@ -18,6 +18,7 @@ export default function Psychotherapy() {
               className={styles.img}
               src={img}
               alt="Mental health workshop"
+              quality={100}
               fill
             />
           </div>

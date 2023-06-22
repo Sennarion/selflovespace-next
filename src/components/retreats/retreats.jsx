@@ -23,6 +23,7 @@ export default function Retreats() {
                       className={styles.img}
                       src={img}
                       alt="Mental health retreat"
+                      quality={100}
                       fill
                     />
                   </div>

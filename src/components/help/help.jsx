@@ -21,6 +21,7 @@ export default function Help() {
               className={styles.img}
               src={img}
               alt="Self-care techniques"
+              quality={100}
               fill
             />
           </div>

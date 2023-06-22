@@ -1,6 +1,5 @@
 import Image from "next/image";
 import classNames from "classnames";
-// import { HashLink } from "react-router-hash-link";
 import Link from "next/link";
 import Section from "../ui/section/section";
 import Container from "../ui/container/container";
@@ -31,6 +30,7 @@ export default function OurServices() {
                       className={styles.img}
                       src={img}
                       alt={title}
+                      quality={100}
                       width="70%"
                       height="70%"
                     />

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Container from "../ui/container/container";
 import styles from "./footer.module.scss";
 import logo from "../../images/logo.svg";
@@ -9,14 +10,15 @@ export default function Footer() {
     <footer className={styles.footer}>
       <Container>
         <div className={styles.footerContent}>
-          <a href="selflovespace.uk" className={styles.logoWrapper}>
+          <Link href="/" className={styles.logoWrapper}>
             <Image
               className={styles.logo}
               src={logo}
               alt="Self Love Space Logo"
+              quality={100}
               fill
             />
-          </a>
+          </Link>
           <div className={styles.info}>
             <ul className={styles.socialList}>
               <li className={styles.socialItem}>

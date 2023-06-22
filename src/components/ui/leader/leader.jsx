@@ -1,4 +1,3 @@
-// import { HashLink } from 'react-router-hash-link';
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./leader.module.scss";
@@ -12,8 +11,9 @@ export default function Leader({ img, name, position, descr, link }) {
             className={styles.img}
             src={img}
             alt={name}
+            quality={100}
             width="96%"
-            height="96%s"
+            height="96%"
           />
         </div>
         <div className={styles.text}>
