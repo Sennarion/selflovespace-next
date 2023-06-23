@@ -58,6 +58,10 @@
   &:focus {
     color: $green;
   }
+
+  &.active {
+    color: $pink;
+  }
 }
 
 .activeNavLink {

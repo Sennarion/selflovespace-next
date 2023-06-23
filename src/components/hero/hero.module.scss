@@ -6,7 +6,8 @@
   gap: 20rem;
 
   @include bp($tablet_max, min) {
-    align-items: flex-start;
+    margin-top: -12rem;
+    align-items: flex-end;
   }
 
   @include bp($tablet_max - 1) {
@@ -40,7 +41,7 @@
 }
 
 .subtitle {
-  margin-bottom: 1rem;
+  margin-bottom: 0.4rem;
 
   &:last-of-type {
     margin-bottom: 6rem;
@@ -65,7 +66,7 @@
 .buttonText {
   max-width: 16rem;
 
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 600;
   text-align: end;
   text-transform: uppercase;

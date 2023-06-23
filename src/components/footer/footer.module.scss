@@ -1,12 +1,13 @@
 @import "../../styles/vars.scss";
+@import "../../styles/mixins.scss";
 
 .footer {
   display: flex;
   align-items: center;
-  height: 20rem;
-  padding: 3rem;
+  padding: 6rem 4rem;
 
-  background-color: $orange;
+  background: $beige_2;
+  border-top: 1px solid $blue;
 }
 
 .footerContent {
@@ -15,6 +16,11 @@
   align-items: center;
 
   margin-bottom: 2rem;
+
+  @include bp($tablet_max - 1) {
+    flex-direction: column;
+    gap: 4rem;
+  }
 }
 
 .logoWrapper {
@@ -24,29 +30,12 @@
   height: 8rem;
 }
 
-.socialList {
-  display: flex;
-}
-
-.socialLink {
-  display: block;
-  padding: 1rem;
-
-  color: $blue;
-  transition: color 0.2s ease-in-out;
-
-  svg {
-    display: block;
-  }
-
-  &:hover,
-  &:focus {
-    color: $green;
-  }
-}
-
 .policy {
   text-align: center;
+
+  @include bp($tablet_max - 1) {
+    margin-top: 4rem;
+  }
 }
 
 .link {

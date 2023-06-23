@@ -20,10 +20,14 @@ export default function RootLayout({ children }) {
           name="keywords"
           content="Self-care, Psychological well-being, Mental health workshop, Personal growth, Self-care techniques, Mental health retreat, Mind-body connection, Wellness retreat, Dance and mental health, Work-life balance, Resilience building"
         />
+        <meta
+          name="description"
+          content="At retreats, individual sessions and trainings we can learn how to live happily and achieve harmony in relationships with others."
+        />
       </head>
       <body className={raleway.className}>
         <Header />
-        <main>{children}</main>
+        <main className="main">{children}</main>
         <Footer />
         {isPopupOpen && <Popup setIsPopupOpen={setIsPopupOpen} />}
       </body>

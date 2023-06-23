@@ -64,7 +64,7 @@
     left: -5%;
     width: 40%;
     height: 1px;
-    background-color: $pink;
+    background-color: $blue;
 
     @include bp($tablet_max - 1) {
       left: 50%;

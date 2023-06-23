@@ -1,0 +1,32 @@
+@import "../../styles/vars.scss";
+@import "../../styles/mixins.scss";
+
+.socialList {
+  display: flex;
+}
+
+.socialLink {
+  display: block;
+  padding: 1rem;
+
+  color: $blue;
+  transition: color 0.2s ease-in-out;
+
+  svg {
+    display: block;
+  }
+
+  &:hover,
+  &:focus {
+    color: $green;
+  }
+}
+
+.infoText {
+  display: block;
+  padding-left: 1rem;
+
+  @include bp($tablet_max - 1) {
+    text-align: center;
+  }
+}

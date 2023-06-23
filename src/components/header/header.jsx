@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 import { Sling as Hamburger } from "hamburger-react";
@@ -14,6 +16,8 @@ import { BsTelephoneFill } from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
 
 export default function Header() {
+  const pathname = usePathname();
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -47,7 +51,12 @@ export default function Header() {
               <ul className={styles.navList}>
                 {navItems.map(({ title, href }) => (
                   <li className={styles.navItem} key={title}>
-                    <Link className={styles.navLink} href={href}>
+                    <Link
+                      className={classNames(styles.navLink, {
+                        [styles.active]: pathname === href,
+                      })}
+                      href={href}
+                    >
                       {title}
                     </Link>
                   </li>
@@ -82,7 +91,7 @@ export default function Header() {
           </div>
         </div>
       </Container>
-      <MobileMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+      <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
     </header>
   );
 }

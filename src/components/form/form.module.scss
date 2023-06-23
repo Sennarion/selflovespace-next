@@ -1,5 +1,5 @@
-@import '../../styles//vars.scss';
-@import '../../styles//mixins.scss';
+@import "../../styles//vars.scss";
+@import "../../styles//mixins.scss";
 
 .formContent {
   display: flex;
@@ -42,14 +42,14 @@
   height: 6rem;
   padding: 1rem 2rem;
 
-  border: 1px solid $orange;
+  border: 1px solid $blue_2;
   border-radius: 0.6rem;
 
   transition: border-color 0.2s ease-in-out;
 
   &:focus {
     outline: transparent;
-    border-color: $pink;
+    border-color: $blue;
   }
 }
 
@@ -57,35 +57,36 @@
   height: 100%;
   padding: 2rem;
 
-  border: 1px solid $orange;
+  border: 1px solid $blue_2;
   border-radius: 0.6rem;
 
   transition: border-color 0.2s ease-in-out;
 
   &:focus {
     outline: transparent;
-    border-color: $pink;
+    border-color: $blue;
   }
 }
 
 .button {
   display: block;
-  padding: 1rem 4rem;
   margin: 0 auto;
+  padding: 1rem 4rem;
 
-  font-size: 2rem;
+  font-weight: 600;
   text-transform: uppercase;
-  color: $beige;
-  background-color: $pink;
+  color: $blue;
 
-  border: none;
+  background-color: transparent;
+  border: 2px solid $blue;
   border-radius: 0.6rem;
   cursor: pointer;
 
-  transition: transform 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 
   &:hover,
   &:focus {
-    transform: scale(1.02);
+    color: $green;
+    border-color: $green;
   }
 }
