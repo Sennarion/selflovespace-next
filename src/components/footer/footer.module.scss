@@ -4,10 +4,17 @@
 .footer {
   display: flex;
   align-items: center;
-  padding: 6rem 4rem;
 
   background: $beige_2;
   border-top: 1px solid $blue;
+
+  @include bp($tablet_max, min) {
+    padding: 4rem 10rem;
+  }
+
+  @include bp($tablet_max - 1) {
+    padding: 4rem;
+  }
 }
 
 .footerContent {

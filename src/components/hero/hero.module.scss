@@ -6,7 +6,7 @@
   gap: 20rem;
 
   @include bp($tablet_max, min) {
-    margin-top: -12rem;
+    margin-top: -4rem;
     align-items: flex-end;
   }
 

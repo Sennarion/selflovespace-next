@@ -4,7 +4,7 @@ import styles from "./social.module.scss";
 export default function Social() {
   return (
     <div className={styles.info}>
-      <span className={styles.infoText}>Follow us</span>
+      <span className={styles.infoText}>Follow Us</span>
       <ul className={styles.socialList}>
         <li className={styles.socialItem}>
           <a
