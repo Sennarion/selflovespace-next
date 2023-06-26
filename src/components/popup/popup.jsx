@@ -14,7 +14,7 @@ export default function Popup({ setIsPopupOpen }) {
           href="https://www.docdroid.net/XuAybtL/privacy-policy-valentyna-bukovska-psychological-services-pdf"
           rel="noreferrer"
         >
-          Learn more
+          Read more
         </a>
       </p>
       <div className={styles.butttons}>

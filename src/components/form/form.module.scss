@@ -4,7 +4,7 @@
 .formContent {
   display: flex;
   gap: 4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 
   @include bp($tablet_max - 1) {
     flex-direction: column;
@@ -88,5 +88,27 @@
   &:focus {
     color: $green;
     border-color: $green;
+  }
+}
+
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.checkboxLink {
+  display: inline-block;
+  margin-left: 1rem;
+  color: inherit;
+  text-decoration: underline;
+
+  transition: color 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $green;
   }
 }

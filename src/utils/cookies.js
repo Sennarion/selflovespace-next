@@ -1,15 +1,18 @@
 export function setCookies(value, func) {
   if (typeof window !== "undefined") {
     const currentDate = new Date().toISOString().slice(0, 10);
+    const expiresDate = new Date();
+    expiresDate.setTime(expiresDate.getTime() + 365 * 24 * 60 * 60 * 1000);
+    const expires = "expires=" + expiresDate.toUTCString();
+
     window.localStorage.setItem(
       "cookiesAccepted",
       JSON.stringify({ accepted: value, date: currentDate })
     );
-    const d = new Date();
-    d.setTime(d.getTime() + 365 * 24 * 60 * 60 * 1000);
-    const expires = "expires=" + d.toUTCString();
-    document.cookie = `cookiesAccepted=${value}; expires=${expires}; path=/`;
+
+    document.cookie = `cookiesAccepted=${value}; ${expires};`;
   }
+
   func(false);
 }
 
@@ -25,11 +28,7 @@ export function checkCookies() {
         const acceptedDate = new Date(date);
         acceptedDate.setFullYear(acceptedDate.getFullYear() + 1);
 
-        if (new Date(currentDate) >= acceptedDate) {
-          return true;
-        } else {
-          return false;
-        }
+        return new Date(currentDate) >= acceptedDate;
       }
     } else {
       return true;

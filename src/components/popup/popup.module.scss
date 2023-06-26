@@ -1,5 +1,5 @@
-@import '../../styles//mixins.scss';
-@import '../../styles//vars.scss';
+@import "../../styles//mixins.scss";
+@import "../../styles//vars.scss";
 
 .popup {
   position: fixed;
@@ -62,5 +62,15 @@
 }
 
 .link {
+  display: inline-block;
+  margin-left: 0.6rem;
+  color: inherit;
   text-decoration: underline;
+
+  transition: color 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $green;
+  }
 }

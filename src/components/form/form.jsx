@@ -98,6 +98,24 @@ export default function Form() {
                 </label>
               </div>
             </div>
+            <label className={styles.checkbox}>
+              <input
+                className={styles.checkboxInput}
+                type="checkbox"
+                required
+              />
+              <p className={styles.checkboxText}>
+                I agree to the processing of personal data.
+                <a
+                  className={styles.checkboxLink}
+                  target="_blank"
+                  href="https://www.docdroid.net/XuAybtL/privacy-policy-valentyna-bukovska-psychological-services-pdf"
+                  rel="noreferrer"
+                >
+                  Read more
+                </a>
+              </p>
+            </label>
             <button
               className={classNames(styles.button, "js-fade-el")}
               type="submit"
