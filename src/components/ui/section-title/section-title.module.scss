@@ -1,5 +1,5 @@
-@import '../../../styles//vars.scss';
-@import '../../../styles/mixins.scss';
+@import "../../../styles//vars.scss";
+@import "../../../styles/mixins.scss";
 
 .titleWrapper {
   margin-bottom: 8rem;
@@ -13,8 +13,8 @@
 }
 
 .title {
-  font-size: 3rem;
-  font-weight: 600;
+  font-size: 2.6rem;
+  font-weight: 500;
   color: $blue;
 
   @include bp($tablet_max - 1) {
@@ -27,6 +27,6 @@
   max-width: 70%;
   margin: 0 auto;
 
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-transform: lowercase;
 }

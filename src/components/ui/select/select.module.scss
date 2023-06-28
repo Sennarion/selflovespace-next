@@ -33,41 +33,42 @@
   right: 0;
   width: 150%;
 
-  background-color: $orange;
+  opacity: 0;
+  pointer-events: none;
+
+  background-color: $beige_2;
+  border: 2px solid $blue;
   border-radius: 0.6rem;
   z-index: 100;
+
+  transition: opacity 0.2s ease-in-out;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
 
   @include bp($tablet_max - 1) {
     left: 50%;
     transform: translateX(-50%);
   }
-}
-
-.selectList {
-  height: 0;
-  overflow: hidden;
 
   &::before {
     position: absolute;
     content: "";
-    top: -0.6rem;
+    top: -0.7rem;
     right: 10rem;
-    width: 0;
-    height: 0;
-    opacity: 0;
-    border-style: solid;
-    border-width: 0 1rem 1rem 1rem;
-    border-color: transparent transparent $orange transparent;
-
-    transition: opacity 0.2s ease-in-out;
-
-    .select.active & {
-      opacity: 1;
-    }
+    width: 1.4rem;
+    height: 1.4rem;
+    border: 2px solid $blue;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    background-color: $beige_2;
+    transform: rotate(45deg);
 
     @include bp($tablet_max - 1) {
       left: 50%;
-      transform: translateX(-50%);
+      transform: translateX(-50%) rotate(45deg);
     }
   }
 }
