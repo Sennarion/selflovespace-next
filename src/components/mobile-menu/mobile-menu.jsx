@@ -28,6 +28,7 @@ export default function MobileMenu({ isMenuOpen, setIsMenuOpen }) {
   return (
     <div className={classNames(styles.menu, { [styles.open]: isMenuOpen })}>
       <div className={styles.content}>
+        <Select />
         <ul className={styles.navList}>
           {navItems.map(({ title, href }) => (
             <li className={styles.navItem} key={title}>
@@ -58,7 +59,6 @@ export default function MobileMenu({ isMenuOpen, setIsMenuOpen }) {
             </a>
           </li>
         </ul>
-        <Select />
       </div>
     </div>
   );

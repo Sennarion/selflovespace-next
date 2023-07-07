@@ -98,7 +98,7 @@ export default function Form() {
                 </label>
               </div>
             </div>
-            <label className={styles.checkbox}>
+            <label className={classNames(styles.checkbox, "js-fade-el")}>
               <input
                 className={styles.checkboxInput}
                 type="checkbox"

@@ -3,6 +3,24 @@ import { useState, useEffect, useRef } from "react";
 import classNames from "classnames";
 import styles from "./select.module.scss";
 
+const events = [
+  {
+    title:
+      "Top Tips for Discovering Inner Harmony: FREE 30 Minute Webinar - Friday, July 14 2023",
+    link: "https://www.facebook.com/events/s/top-tips-for-discovering-inner/2314019568801327/",
+  },
+  {
+    title:
+      "Top Tips for Discovering Inner Harmony: FREE 30 Minute Webinar - Monday, July 17 2023",
+    link: "https://www.facebook.com/events/141047202341988?paipv=0&eav=AfbcRpW-giFop2GyKZavPDqDWJRSeede_z4rOfkJpw6DKe2cbssObA5vTuxei6f0RTg&_rdr",
+  },
+  {
+    title:
+      '"The Pleasure of Being in Tune with Yourself and Your Body" retreat 19th - 22nd September 2023',
+    link: "https://docdro.id/bGvkx2b",
+  },
+];
+
 export default function Select() {
   const [isSelectOpen, setIsSelectOpen] = useState(false);
 
@@ -35,18 +53,19 @@ export default function Select() {
           [styles["active"]]: isSelectOpen,
         })}
       >
-        <li className={styles.listItem}>
-          <a
-            className={styles.listLink}
-            target="_blank"
-            href="https://docdro.id/bGvkx2b"
-            rel="noreferrer"
-            onClick={() => setIsSelectOpen(false)}
-          >
-            "The Pleasure of Being in Tune with Yourself and Your Body" retreat
-            19th - 22nd September 2023
-          </a>
-        </li>
+        {events.map(({ title, link }) => (
+          <li className={styles.listItem} key={link}>
+            <a
+              className={styles.listLink}
+              target="_blank"
+              href={link}
+              rel="noreferrer"
+              onClick={() => setIsSelectOpen(false)}
+            >
+              {title}
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
   );
