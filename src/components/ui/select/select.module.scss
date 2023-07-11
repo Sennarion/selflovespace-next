@@ -51,6 +51,9 @@
 
   @include bp($tablet_max - 1) {
     left: 50%;
+    max-height: 40rem;
+    overflow: hidden;
+    overflow-y: scroll;
     transform: translateX(-50%);
   }
 
