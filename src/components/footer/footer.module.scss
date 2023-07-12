@@ -58,3 +58,11 @@
     color: $green;
   }
 }
+
+.contact {
+  padding-left: 1rem;
+
+  &:last-of-type {
+    margin-bottom: 2rem;
+  }
+}

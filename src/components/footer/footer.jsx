@@ -19,10 +19,14 @@ export default function Footer() {
               fill
             />
           </Link>
-          <Social />
+          <div className={styles.contacts}>
+            <p className={styles.contact}>+44 7760 164058</p>
+            <p className={styles.contact}>valentyna@selflovespace.uk</p>
+            <Social />
+          </div>
         </div>
         <p className={styles.policy}>
-          © Self Love Space. 2023.
+          © Self Love Space 2023.
           <a
             className={styles.link}
             target="_blank"

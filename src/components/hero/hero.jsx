@@ -57,6 +57,7 @@ export default function Hero() {
               src={heroImg}
               alt="Self-care"
               quality={100}
+              priority
               fill
             />
           </div>
