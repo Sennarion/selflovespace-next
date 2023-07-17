@@ -19,7 +19,7 @@ export default function Social() {
         <li className={styles.socialItem}>
           <a
             className={styles.socialLink}
-            href="https://www.linkedin.com/in/self-love-space-13487727b/"
+            href="https://www.linkedin.com/company/self-love-space-mental-health-support/"
             target="_blank"
             rel="noreferrer"
           >
