@@ -6,11 +6,6 @@ import styles from "./select.module.scss";
 const events = [
   {
     title:
-      "Top Tips for Discovering Inner Harmony: FREE 30 Minute Webinar - Monday, July 17 2023",
-    link: "https://www.facebook.com/events/141047202341988?paipv=0&eav=AfbcRpW-giFop2GyKZavPDqDWJRSeede_z4rOfkJpw6DKe2cbssObA5vTuxei6f0RTg&_rdr",
-  },
-  {
-    title:
       "Nourishing the Soul: Lunchtime Delights with Self Love Space - Saturday, July 22 2023",
     link: "https://www.facebook.com/events/2902193739988755/?acontext=%7B%22ref%22%3A%2252%22%2C%22action_history%22%3A%22[%7B%5C%22surface%5C%22%3A%5C%22share_link%5C%22%2C%5C%22mechanism%5C%22%3A%5C%22share_link%5C%22%2C%5C%22extra_data%5C%22%3A%7B%5C%22invite_link_id%5C%22%3A225274447086448%7D%7D]%22%7D",
   },
