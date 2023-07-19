@@ -182,7 +182,7 @@ export const services = [
   {
     img: service3,
     href: "services#psychotherapy",
-    title: "Group psychotherapy",
+    title: "Group support",
   },
   {
     img: service4,
@@ -238,6 +238,30 @@ export const psychotherapy = [
   {
     title: "Classic psychological support group",
     text: "A perfect way to feel much better for anyone who feels lonely, is constantly in a depressed mood or seems that life is monotonous and has lost its color. It is also a great opportunity to recover after experienced stress or difficult life events",
+  },
+  {
+    title: "Staff support trainings",
+    text: "They are very useful to ensure a positive psychological state of each employee and the team as a whole and make your team more productive. What results can be obtained after training:",
+    list: [
+      "- optimization of relations within the team",
+      "- possibility of a competent way out of conflict situations",
+      "- increasing the efficiency of each employee and team",
+      "- productive workflow",
+      "- developing the ability to work together",
+      "- development of communicative competence and emotional intelligence of participants of the training",
+      "- awareness of a personal mission, formation of a personal strategy for success by team members",
+      "- awareness of factors that reduce personal effectiveness and the ability to resist them",
+      "- individual development program for each employee",
+      "- time management skills to achieve goals: prioritization in business, self-motivation",
+      "- development of the ability to effectively resist negative external influences, mastering stress management techniques",
+      "- development of effective communication skills in a conflict, emotional stress, the ability to build a constructive dialogue to solve problems",
+      "- increasing personal responsibility for the overall result",
+      "- increasing the efficiency of employees in the face of change and uncertainty",
+      "- development of effective teamwork skills",
+      "- strategies for managing your emotions",
+      "- ways to increase and decrease emotional intensity",
+      "- ways not to get involved in emotion and resist provocation",
+    ],
   },
 ];
 

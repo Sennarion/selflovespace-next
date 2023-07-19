@@ -24,19 +24,33 @@ export default function Psychotherapy() {
           </div>
           <div className={styles.textWrapper}>
             <SectionTitle className="js-fade-el-translate">
-              Group psychotherapy
+              Group support
             </SectionTitle>
             <ul className={classNames(styles.list, "js-fade-stagger-w")}>
-              {psychotherapy.map(({ title, text }) => (
+              {psychotherapy.map(({ title, text, list }) => (
                 <li
                   className={classNames(styles.item, "js-fade-stagger")}
                   key={title}
                 >
                   <h3 className={styles.textTitle}>{title}</h3>
                   <p className={styles.text}>{text}</p>
+                  {list && (
+                    <ul>
+                      {list.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
               ))}
             </ul>
+            <p>
+              To conduct trainings, the best practices for working with
+              personnel from world experience, psychological techniques and
+              methods that have proven their effectiveness and efficiency are
+              used. Trainings are developed taking into account the
+              characteristics of your team and the actual needs of employees
+            </p>
             <ul className={classNames(styles.leadersList, "js-fade-el")}>
               <Leader {...leaders[0]} />
             </ul>
