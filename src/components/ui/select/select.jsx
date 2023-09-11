@@ -6,16 +6,6 @@ import styles from "./select.module.scss";
 const events = [
   {
     title:
-      "Nourishing the Soul: Lunchtime Delights with Self Love Space - Saturday, August 19 2023",
-    link: "https://www.facebook.com/events/991562461975463/?acontext=%7B%22ref%22%3A%2252%22%2C%22action_history%22%3A%22[%7B%5C%22surface%5C%22%3A%5C%22share_link%5C%22%2C%5C%22mechanism%5C%22%3A%5C%22share_link%5C%22%2C%5C%22extra_data%5C%22%3A%7B%5C%22invite_link_id%5C%22%3A233593166230206%7D%7D]%22%7D",
-  },
-  {
-    title:
-      "Nourishing the Soul: Lunchtime Delights with Self Love Space - Saturday, August 26 2023",
-    link: "https://www.facebook.com/events/823368232407644/?acontext=%7B%22ref%22%3A%2252%22%2C%22action_history%22%3A%22[%7B%5C%22surface%5C%22%3A%5C%22share_link%5C%22%2C%5C%22mechanism%5C%22%3A%5C%22share_link%5C%22%2C%5C%22extra_data%5C%22%3A%7B%5C%22invite_link_id%5C%22%3A561710889299377%7D%7D]%22%7D",
-  },
-  {
-    title:
       '"The Pleasure of Being in Tune with Yourself and Your Body" retreat 19th - 22nd September 2023',
     link: "https://docdro.id/bGvkx2b",
   },
